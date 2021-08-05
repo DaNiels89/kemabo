@@ -1,0 +1,16 @@
+html {
+  font-size: 14px;
+}
+
+body {
+  background-color: #fff;
+  font-family: "Poppins", serif;
+  color: #000;
+  font-size: 1em;
+}
+
+@media (min-width: 992px) {
+  html {
+    font-size: 16px;
+  }
+}

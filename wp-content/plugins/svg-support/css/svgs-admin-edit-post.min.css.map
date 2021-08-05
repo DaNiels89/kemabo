@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAMA,AAAA,IAAI,CAAC,mBAAmB,CACxB,IAAI,CAAC,aAAa,CAAC,OAAO,CAAC,GAAG,CAAA,AAAA,GAAC,EAAK,MAAM,AAAX,CAAa,CAC3C,KAAK,CAAE,IAAI,CACX",
+    "sources": [
+        "../scss/svgs-admin-edit-post.scss"
+    ],
+    "names": [],
+    "file": "svgs-admin-edit-post.min.css"
+}
