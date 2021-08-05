@@ -1,8 +1,16 @@
 $clr-light: #fff;
 $clr-dark: #000;
 $clr-light-gray: #f5f5f5;
+$clr-medium-gray: #e3e3e3;
 $clr-dark-gray: #a5a5a5;
 $clr-red: #e50c00;
+
+$ff-main: "Work Sans", sans-serif;
+$ff-secondary: "Montserrat", sans-serif;
+
+$fw-light: 300;
+$fw-regular: 400;
+$fw-bold: 700;
 
 html {
 	font-size: 15px;
@@ -10,19 +18,423 @@ html {
 
 body {
 	background-color: $clr-light;
-	font-family: "Work Sans", sans-serif;
+	font-family: $ff-main;
 	color: $clr-dark;
 	font-size: 1rem;
 }
 
-p {
-	font-family: "Montserrat", sans-serif;
-	font-size: 14px;
+h1 {
 }
 
-ul {
-	font-family: "Montserrat", sans-serif;
+h2 {
+}
+
+h3 {
+	font-size: 30px;
+	text-transform: uppercase;
+	font-weight: $fw-bold;
+	line-height: 1.25;
+	&.h3-padding {
+		padding-top: 0.5em;
+		padding-bottom: 0.5em;
+	}
+}
+
+h4 {
+	&.light-color {
+		color: $clr-light;
+		font-size: 20px;
+		font-weight: $fw-bold;
+		text-transform: uppercase;
+		margin-bottom: 1.2em;
+	}
+	&.red-subtitle {
+		color: $clr-red;
+		font-size: 15px;
+		text-transform: uppercase;
+		font-weight: $fw-light;
+		margin-bottom: 0;
+	}
+	&.cooperating-title {
+		font-size: 20px;
+		font-weight: bold;
+		text-align: center;
+		text-transform: uppercase;
+		padding-top: 54px;
+		padding-bottom: 54px;
+		max-width: 12ch;
+		line-height: 1.5;
+	}
+}
+
+p {
+	font-family: $ff-secondary;
+	font-size: 14px;
+	line-height: 2;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+.bgc-light-gray {
+	background: #f5f5f5;
+}
+
+// Header
+#mobile-menu {
+	height: 90px;
+	width: 100%;
+	padding-left: 20px;
+	padding-right: 22px;
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 9999;
+}
+
+.navbar-toggler {
+	background-color: $clr-dark-gray;
+	height: 50px;
+	width: 50px;
+	border-radius: 0;
+	border: none;
+}
+
+.navbar-light .navbar-toggler-icon {
+	background-image: url("/kemabo/wp-content/uploads/2021/08/bars-solid.svg");
+}
+// End header
+
+// Bootstrap container
+.container-fluid {
+	padding-left: 30px;
+	padding-right: 30px;
+}
+// End Bootstrap container
+
+.hero-bgi {
+	margin-top: 90px;
+	padding-top: 82px;
+	background-image: url("http://localhost/kemabo/wp-content/uploads/2021/08/home-hero-image.png");
+	background-repeat: no-repeat;
+	background-color: $clr-light;
+	background-position: bottom center;
+	position: relative;
+	padding-bottom: 192px;
+}
+
+.hero-bgi-overlay {
+	position: absolute;
+	background: rgba(0, 0, 0, 0.3);
+	inset: 0;
+}
+
+.hero-subtitle {
+	color: $clr-light;
+	font-size: 20px;
+	font-weight: $fw-light;
+	text-transform: uppercase;
+}
+
+.hero-paragraph {
+	color: $clr-light;
+	font-size: 20px;
+	font-weight: $fw-bold;
+	text-transform: uppercase;
+	margin-top: 1em;
+	margin-bottom: 2em;
+	line-height: 1.5;
+}
+
+.hero-a {
+	color: $clr-light;
+	font-size: 13px;
+	font-weight: $fw-bold;
+	text-transform: uppercase;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	&:hover,
+	&:active,
+	&:focus {
+		color: $clr-light-gray;
+		text-decoration: none;
+		& rect {
+			fill: $clr-red;
+		}
+		& path {
+			fill: $clr-light;
+		}
+
+		&:hover {
+			& rect {
+				fill: $clr-dark;
+			}
+			& path {
+				fill: $clr-light;
+			}
+		}
+	}
+}
+
+.red-rect-svg {
+	margin-left: 20px;
+	& rect {
+		fill: $clr-red;
+	}
+	& path {
+		fill: $clr-light;
+	}
+	&:hover {
+		& rect {
+			fill: $clr-dark;
+		}
+		& path {
+			fill: $clr-light;
+		}
+	}
+}
+
+.dark-rect-svg {
+	margin-left: 20px;
+	& rect {
+		fill: $clr-dark;
+	}
+	& path {
+		fill: $clr-light;
+	}
+	&:hover {
+		& rect {
+			fill: $clr-light;
+		}
+		& path {
+			fill: $clr-dark;
+		}
+		border: 1px solid $clr-dark;
+	}
+}
+
+.red-bgc-div {
+	background: $clr-red;
+	height: 243px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-left: 31px;
+	border-radius: 5px;
+	transform: translateY(-50%);
+	position: relative;
+}
+
+.red-bgc-ul {
+	padding-left: 1em;
+	margin-bottom: 0;
+}
+
+.red-bgc-ul-li {
+	font-family: $ff-secondary;
+	color: $clr-light;
 	font-size: 16px;
+	padding-left: 0.5em;
+	list-style-image: url("http://localhost/kemabo/wp-content/uploads/2021/08/chevron-right-solid-dark.svg");
+	margin-bottom: 0.5em;
+}
+
+.dark-bgc-light-arrow {
+	position: absolute;
+	right: 20px;
+	bottom: -10px;
+}
+
+.who-are-we-div {
+	border: 1px solid $clr-medium-gray;
+	background: $clr-light;
+	border-radius: 5px;
+}
+
+.who-are-we-img-div {
+	margin-bottom: 1em;
+}
+
+.who-are-we-text-div {
+	padding: 22px;
+	padding: 22px;
+	position: relative;
+}
+
+.who-are-we-a {
+	position: absolute;
+	left: 27px;
+	bottom: -10px;
+}
+
+.recent-projects-div-for-image {
+	position: relative;
+	margin-bottom: 2em;
+}
+
+.recent-projects-image {
+	z-index: -1;
+}
+
+.recent-projects-image-top-text {
+	position: absolute;
+	top: 0;
+	left: 23px;
+	height: 34px;
+	padding-left: 10px;
+	padding-right: 10px;
+	background-color: $clr-dark;
+	color: $clr-light;
+	text-transform: uppercase;
+	font-size: 12px;
+	font-weight: $fw-bold;
+	display: flex;
+	align-items: center;
+	&.latest-news {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+}
+
+.recent-projects-image-bottom-text {
+	position: absolute;
+	bottom: 23px;
+	left: 23px;
+	font-family: $ff-secondary;
+	font-size: 16px;
+	color: $clr-light;
+	line-height: 1.5;
+	display: block;
+}
+
+.recent-projects-image-bottom-a {
+	position: absolute;
+	right: 11px;
+	bottom: -5px;
+}
+
+.recent-projects-image-overlay {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	height: 90px;
+	width: 100%;
+	background: linear-gradient(
+		to top,
+		rgba(0, 0, 0, 0.8),
+		rgba(0, 0, 0, 0.6),
+		rgba(0, 0, 0, 0.4),
+		rgba(0, 0, 0, 0.2),
+		rgba(0, 0, 0, 0)
+	);
+}
+
+.see-all-projects-div {
+	position: relative;
+}
+
+.see-all-projects-image-overlay {
+	position: absolute;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.7);
+	padding-top: 89px;
+}
+
+.see-all-projects-subtitle {
+	color: $clr-light;
+	font-size: 15px;
+	font-weight: $fw-light;
+	text-transform: uppercase;
+}
+
+.red-bgc-div-team {
+	height: 314px;
+	display: flex;
+	align-items: center;
+	background-color: $clr-red;
+	transform: translateY(-50%);
+	& .team-title {
+		font-size: 50px;
+		font-weight: $fw-bold;
+		color: $clr-light;
+		text-transform: uppercase;
+		line-height: 1.2;
+		margin-left: 30px;
+	}
+}
+
+.team-member-div {
+	position: relative;
+	margin-top: 10px;
+}
+
+.team-member-image-overlay {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	height: 133px;
+	background: linear-gradient(
+		to top,
+		rgba(0, 0, 0, 0.8),
+		rgba(0, 0, 0, 0.6),
+		rgba(0, 0, 0, 0.4),
+		rgba(0, 0, 0, 0.2),
+		rgba(0, 0, 0, 0)
+	);
+}
+
+.team-member-details {
+	position: absolute;
+	bottom: 34px;
+	left: 39px;
+}
+
+.team-member-function {
+	display: block;
+	color: $clr-light;
+	font-size: 12px;
+	text-transform: uppercase;
+	margin-bottom: 0.5em;
+}
+
+.team-member-name {
+	display: block;
+	color: $clr-light;
+	font-family: $ff-secondary;
+	font-size: 22px;
+}
+
+.padding-div-95 {
+	padding-top: 6.33rem;
+}
+
+.cooperating-div {
+	display: flex;
+	justify-content: center;
+}
+
+.cooperation-div {
+	margin-top: 51px;
+}
+
+.mobile-half-gray-half-light-bgc {
+	background: linear-gradient(180deg, $clr-light-gray 50%, $clr-light 50%);
+}
+
+.logo-partner-div {
+	height: 237px;
+	display: grid;
+	place-items: center;
+	border: 1px solid $clr-medium-gray;
+	border-radius: 5px;
+	margin-bottom: 10px;
+}
+
+.padding-div-101 {
+	padding-top: 101px;
 }
 
 @media (min-width: 768px) {
