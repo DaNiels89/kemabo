@@ -48,6 +48,8 @@ get_header();
     </div>
 </div>
 
+<div class="padding-div-95"></div>
+
 <div class="container-fluid bgc-light-gray pb-5">
     <div class="row">
         <div class="col">
@@ -80,7 +82,7 @@ get_header();
 <div class="container-fluid bgc-light-gray">
     <div class="row">
         <div class="col">
-            <div class="text-center">
+            <div class="recent-projects-text-div text-center">
                 <h4 class="red-subtitle">Lorum ipsum dolor</h4>
                 <h3 class="h3-padding">Recente projecten</h3>
             </div>
@@ -250,22 +252,28 @@ get_header();
     </div>
 </div>
 
-<div class="container-fluid">
+<div class="container-fluid logo-partners-div">
     <div class="row">
-        <div class="col mobile-half-gray-half-light-bgc">
-            <div class="logo-partner-div bg-white">
-                <img src="/kemabo/wp-content/uploads/2021/08/Logo-MBI-De-Steenmeesters.svg" alt="" class="">
-            </div>
+        <div class="col-md-4">
+            <a href="https://www.mbi.nl/" class="" target="_blank">
+                <div class="logo-partner-div">
+                    <img src="/kemabo/wp-content/uploads/2021/08/Logo-MBI-De-Steenmeesters.svg" alt="" class="logo-partner-img">
+                </div>
+            </a>
         </div>
-        <div class="col">
-            <div class="logo-partner-div">
-                <img src="/kemabo/wp-content/uploads/2021/08/Logo-Hansaflex.svg" alt="" class="">
-            </div>
+        <div class="col-md-4">
+            <a href="https://nl.hansa-flex.com/index.html" class="" target="_blank">
+                <div class="logo-partner-div">
+                    <img src="/kemabo/wp-content/uploads/2021/08/Logo-Hansaflex.svg" alt="" class="logo-partner-img">
+                </div>
+            </a>
         </div>
-        <div class="col">
-            <div class="logo-partner-div">
-                <img src="/kemabo/wp-content/uploads/2021/08/Logo-MBI-De-Steenmeesters.svg" alt="" class="">
-            </div>
+        <div class="col-md-4">
+            <a href="https://www.mbi.nl/" class="" target="_blank">
+                <div class="logo-partner-div">
+                    <img src="/kemabo/wp-content/uploads/2021/08/Logo-MBI-De-Steenmeesters.svg" alt="" class="logo-partner-img">
+                </div>
+            </a>
         </div>
     </div>
 </div>

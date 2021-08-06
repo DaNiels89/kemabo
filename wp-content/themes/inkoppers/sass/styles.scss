@@ -60,8 +60,6 @@ h4 {
 		font-weight: bold;
 		text-align: center;
 		text-transform: uppercase;
-		padding-top: 54px;
-		padding-bottom: 54px;
 		max-width: 12ch;
 		line-height: 1.5;
 	}
@@ -75,8 +73,16 @@ p {
 	margin-bottom: 1em;
 }
 
+.bgc-light {
+	background: $clr-light;
+}
+
 .bgc-light-gray {
-	background: #f5f5f5;
+	background: $clr-light-gray;
+}
+
+.bgc-red {
+	background: $clr-red;
 }
 
 // Header
@@ -181,9 +187,30 @@ p {
 	margin-left: 20px;
 	& rect {
 		fill: $clr-red;
+		transition: all 0.3s ease-in-out;
 	}
 	& path {
 		fill: $clr-light;
+		transition: all 0.3s ease-in-out;
+	}
+	&:hover {
+		& rect {
+			fill: $clr-dark;
+		}
+		& path {
+			fill: $clr-light;
+		}
+	}
+}
+
+.red-rect-svg-smaller {
+	& rect {
+		fill: $clr-red;
+		transition: all 0.3s ease-in-out;
+	}
+	& path {
+		fill: $clr-light;
+		transition: all 0.3s ease-in-out;
 	}
 	&:hover {
 		& rect {
@@ -199,9 +226,11 @@ p {
 	margin-left: 20px;
 	& rect {
 		fill: $clr-dark;
+		transition: all 0.3s ease-in-out;
 	}
 	& path {
 		fill: $clr-light;
+		transition: all 0.3s ease-in-out;
 	}
 	&:hover {
 		& rect {
@@ -222,7 +251,7 @@ p {
 	justify-content: center;
 	padding-left: 31px;
 	border-radius: 5px;
-	transform: translateY(-50%);
+	margin-top: -121.5px;
 	position: relative;
 }
 
@@ -266,6 +295,11 @@ p {
 	position: absolute;
 	left: 27px;
 	bottom: -10px;
+}
+
+.recent-projects-text-div {
+	padding-top: 2em;
+	padding-bottom: 2em;
 }
 
 .recent-projects-div-for-image {
@@ -333,6 +367,7 @@ p {
 
 .see-all-projects-div {
 	position: relative;
+	margin-top: 3em;
 }
 
 .see-all-projects-image-overlay {
@@ -354,7 +389,7 @@ p {
 	display: flex;
 	align-items: center;
 	background-color: $clr-red;
-	transform: translateY(-50%);
+	margin-top: -157px;
 	& .team-title {
 		font-size: 50px;
 		font-weight: $fw-bold;
@@ -414,14 +449,16 @@ p {
 .cooperating-div {
 	display: flex;
 	justify-content: center;
+	padding-top: 54px;
+	padding-bottom: 170px;
 }
 
 .cooperation-div {
 	margin-top: 51px;
 }
 
-.mobile-half-gray-half-light-bgc {
-	background: linear-gradient(180deg, $clr-light-gray 50%, $clr-light 50%);
+.logo-partners-div {
+	margin-top: -118.5px;
 }
 
 .logo-partner-div {
@@ -431,13 +468,108 @@ p {
 	border: 1px solid $clr-medium-gray;
 	border-radius: 5px;
 	margin-bottom: 10px;
+	background: $clr-light;
+
+	.logo-partner-img {
+		transition: all 0.3s ease-in-out;
+	}
+
+	&:hover {
+		.logo-partner-img {
+			transform: scale(1.1);
+		}
+	}
 }
 
 .padding-div-101 {
 	padding-top: 101px;
 }
 
+// Footer
+.padding-div-200 {
+	padding-top: 200px;
+}
+
+.bgi-footer {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.3)),
+		url("/kemabo/wp-content/uploads/2021/08/home-hero-image.png");
+	background-color: $clr-light;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-height: calc(100vh - 90px);
+}
+
+.margin-top-row-half {
+	margin-top: -91px;
+	margin-right: -30px;
+	margin-bottom: 10em;
+	margin-left: -30px;
+}
+
+.footer-upper-div-item {
+	padding: 20px;
+	padding-top: 30px;
+}
+
+.footer-logo-div {
+	height: 182px;
+	background-color: $clr-light;
+	border: 1px solid $clr-medium-gray;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+.h4-footer {
+	font-size: 18px;
+	color: $clr-light;
+	text-transform: uppercase;
+	font-weight: $fw-bold;
+	margin-bottom: 25px;
+}
+
+.footer-p {
+	margin: 0;
+	font-family: $ff-secondary;
+	font-size: 12px;
+	line-height: 1.78;
+	color: $clr-light;
+}
+
+.footer-a {
+	font-family: $ff-secondary;
+	font-size: 12px;
+	line-height: 1.78;
+	color: $clr-light;
+}
+
+.footer-social-a {
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.footer-social-svg {
+	margin-left: 0;
+}
+
+.footer-bottom {
+	margin-top: 10em;
+	padding-bottom: 2em;
+	& p,
+	& a {
+		font-size: 14px;
+		line-height: 2.7;
+	}
+}
+// End footer
+
 @media (min-width: 768px) {
+	h4 {
+		&.cooperating-title {
+			max-width: max-content;
+		}
+	}
 }
 
 @media (min-width: 992px) {
