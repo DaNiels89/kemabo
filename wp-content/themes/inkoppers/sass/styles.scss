@@ -121,10 +121,12 @@ p {
 .hero-bgi {
 	margin-top: 90px;
 	padding-top: 82px;
-	background-image: url("http://localhost/kemabo/wp-content/uploads/2021/08/home-hero-image.png");
+	background-image: linear-gradient(rgba(0, 0, 0, 0.3)),
+		url("http://localhost/kemabo/wp-content/uploads/2021/08/home-hero-image.png");
 	background-repeat: no-repeat;
 	background-color: $clr-light;
 	background-position: bottom center;
+	background-attachment: fixed;
 	position: relative;
 	padding-bottom: 192px;
 }
@@ -368,6 +370,15 @@ p {
 .see-all-projects-div {
 	position: relative;
 	margin-top: 3em;
+	background: linear-gradient(rgba(0, 0, 0, 0.3)),
+		url("/kemabo/wp-content/uploads/2021/08/projecten_afbeelding_groot.png");
+	background-color: $clr-light;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	height: 566px;
+	padding-top: 89px;
 }
 
 .see-all-projects-image-overlay {
@@ -497,6 +508,7 @@ p {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+	background-attachment: fixed;
 	min-height: calc(100vh - 90px);
 }
 

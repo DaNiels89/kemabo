@@ -6,7 +6,6 @@ get_header();
 ?>
 
 <div class="hero-bgi">
-    <div class="hero-bgi-overlay"></div>
     <div class="container-fluid">
         <div class="row">
             <div class="col text-center">
@@ -136,8 +135,8 @@ get_header();
 </div>
 
 <div class="see-all-projects-div">
-    <img src="/kemabo/wp-content/uploads/2021/08/mobile-home-4.png" alt="" class="img-fluid">
-    <div class="see-all-projects-image-overlay">
+    <!-- <img src="/kemabo/wp-content/uploads/2021/08/mobile-home-4.png" alt="" class="img-fluid"> -->
+    <!-- <div class="see-all-projects-image-overlay"> -->
         <div class="container-fluid">
             <div class="row">
                 <div class="col text-center">
