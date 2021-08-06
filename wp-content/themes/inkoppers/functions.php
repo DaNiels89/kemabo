@@ -22,10 +22,13 @@ function enqueue_scripts()
     wp_enqueue_style("font-awesome-css", get_stylesheet_directory_uri() . "/css/all.min.css", [], $version);
     wp_enqueue_style("google-fonts", "https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;700&display=swap", [], $version);
     wp_enqueue_style("google-fonts", "https://fonts.googleapis.com/css2?family=Montserrat&display=swap", [], $version);
+    wp_enqueue_style("slick-css", get_stylesheet_directory_uri() . "/slick/slick.css", [], $version);
+    wp_enqueue_style("slick-theme-css", get_stylesheet_directory_uri() . "/slick/slick-theme.css", [], $version);
     wp_enqueue_style("styles-css", get_stylesheet_directory_uri() . "/css/styles.min.css", [], $version);
 
     wp_enqueue_script("jquery-js", get_stylesheet_directory_uri() . "/js/jquery-3.5.1.min.js", [], $version);
     wp_enqueue_script("bootstrap-js", get_stylesheet_directory_uri() . "/js/bootstrap.bundle.min.js", [], $version);
+    wp_enqueue_script("slick-js", get_stylesheet_directory_uri() . "/slick/slick.min.js", [], $version);
     wp_enqueue_script("custom-js", get_stylesheet_directory_uri() . "/js/custom.js", [], $version);
 }
 
