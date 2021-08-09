@@ -30,6 +30,10 @@ h1 {
 }
 
 h2 {
+	font-size: 2rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	line-height: 1.25;
 }
 
 h3 {
@@ -92,8 +96,8 @@ p {
 #mobile-menu {
 	height: 90px;
 	width: 100%;
-	padding-left: 20px;
-	padding-right: 22px;
+	padding-left: 0;
+	padding-right: 0;
 	position: fixed;
 	top: 0;
 	right: 0;
@@ -101,16 +105,55 @@ p {
 	z-index: 9999;
 }
 
+.navbar-brand {
+	margin-left: 20px;
+}
+
 .navbar-toggler {
 	background-color: $clr-dark-gray;
 	height: 50px;
 	width: 50px;
+	margin-right: 22px;
 	border-radius: 0;
 	border: none;
 }
 
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+	outline: none;
+	box-shadow: none;
+}
+
 .navbar-light .navbar-toggler-icon {
 	background-image: url("/kemabo/wp-content/uploads/2021/08/bars-solid.svg");
+	background-size: 75%;
+}
+
+.navbar-collapse {
+	padding-bottom: 90px;
+	ul {
+		li {
+			&.menu-item {
+				font-size: 20px;
+				list-style-type: none;
+				text-transform: uppercase;
+				margin-block: 1em;
+				a {
+					color: $clr-dark;
+					font-weight: $fw-bold;
+				}
+			}
+		}
+	}
+	&.collapse {
+		&.show {
+			height: 100vh;
+			background: $clr-light;
+			display: flex;
+			align-items: center;
+		}
+	}
 }
 // End header
 
@@ -125,19 +168,17 @@ p {
 	margin-top: 90px;
 	padding-top: 82px;
 	background-image: linear-gradient(rgba(0, 0, 0, 0.3)),
-		url("http://localhost/kemabo/wp-content/uploads/2021/08/home-hero-image.png");
+		url("/kemabo/wp-content/uploads/2021/08/home-hero-image.png");
 	background-repeat: no-repeat;
 	background-color: $clr-light;
 	background-position: bottom center;
 	background-attachment: fixed;
+	background-size: cover;
 	position: relative;
 	padding-bottom: 192px;
-}
-
-.hero-bgi-overlay {
-	position: absolute;
-	background: rgba(0, 0, 0, 0.3);
-	inset: 0;
+	display: flex;
+	height: 100%;
+	align-items: center;
 }
 
 .hero-subtitle {
@@ -339,6 +380,13 @@ p {
 	padding: 22px;
 	padding: 22px;
 	position: relative;
+	max-height: 542px;
+	background: $clr-light;
+	border: 1px solid $clr-medium-gray;
+	border-radius: 5px;
+	& .red-rect-svg {
+		margin-left: 0;
+	}
 }
 
 .who-are-we-a {
@@ -418,7 +466,7 @@ p {
 .see-all-projects-div {
 	position: relative;
 	margin-top: 3em;
-	background: linear-gradient(rgba(0, 0, 0, 0.3)),
+	background: linear-gradient(rgba(0, 0, 0, 0.7)),
 		url("/kemabo/wp-content/uploads/2021/08/projecten_afbeelding_groot.png");
 	background-color: $clr-light;
 	background-repeat: no-repeat;
@@ -503,6 +551,7 @@ p {
 
 .padding-div-95 {
 	padding-top: 6.33rem;
+	background: $clr-light-gray;
 }
 
 .cooperating-div {
@@ -530,7 +579,10 @@ p {
 	background: $clr-light;
 
 	.logo-partner-img {
-		transition: all 0.3s ease-in-out;
+		transition: transform 0.3s ease-in-out;
+		object-fit: scale-down;
+		width: 100%;
+		padding: 1em;
 	}
 
 	&:hover {
@@ -625,10 +677,92 @@ p {
 // End footer
 
 @media (min-width: 768px) {
+	h2 {
+		font-size: 50px;
+	}
+
+	h3 {
+		font-size: 40px;
+		&.h3-padding {
+			padding-top: 10px;
+		}
+	}
+
 	h4 {
+		&.red-subtitle {
+			font-size: 20px;
+		}
+		&.light-color {
+			font-size: 22px;
+		}
 		&.cooperating-title {
 			max-width: max-content;
+			font-size: 30px;
 		}
+	}
+
+	p {
+		font-size: 16px;
+	}
+
+	.hero-bgi {
+		height: 768px;
+	}
+
+	.hero-subtitle {
+		font-size: 30px;
+	}
+
+	.hero-paragraph {
+		font-size: 40px;
+	}
+
+	.hero-a {
+		font-size: 15px;
+	}
+
+	.red-bgc-div {
+		height: 278px;
+	}
+
+	.red-bgc-ul-li {
+		font-size: 18px;
+	}
+
+	.see-all-projects-div {
+		height: 864px;
+		padding-top: 189px;
+	}
+
+	.see-all-projects-subtitle {
+		font-size: 20px;
+	}
+
+	.hero-paragraph {
+		&.hero-paragraph-smaller {
+			font-size: 32px;
+		}
+	}
+
+	.red-bgc-div-team {
+		height: 398px;
+		margin-top: -199px;
+		& .team-title {
+			margin-left: 50px;
+		}
+	}
+
+	.cooperating-div {
+		padding-top: 107px;
+		padding-bottom: 280px;
+	}
+
+	.logo-partners-div {
+		margin-top: -167.5px;
+	}
+
+	.logo-partner-div {
+		height: 335px;
 	}
 }
 
@@ -636,9 +770,32 @@ p {
 	html {
 		font-size: 16px;
 	}
+
+	.hero-bgi {
+		height: 890px;
+	}
 }
 
 @media (min-width: 1200px) {
+	.container-fluid {
+		padding-left: 140px;
+		padding-right: 140px;
+	}
+
+	.neg-margin-col {
+		margin-right: -125px;
+	}
+
+	.who-are-we-text-div {
+		padding: 60px;
+		& .red-rect-svg {
+			margin-left: 60px;
+		}
+	}
+
+	.who-are-we-a {
+		left: 0;
+	}
 }
 
 @media (min-width: 1400px) {

@@ -23,25 +23,6 @@ defined( "ABSPATH" ) || exit;
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Waterbeheersing</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Aandrijf en besturingstechniek</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Draai en freeswerk</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Over ons</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Projecten</a>
-      </li>
-    </ul>
+      <?php wp_nav_menu(['menu' => 'Hoofdmenu', 'container' => false, 'menu_class' => false]); ?>
   </div>
 </nav>
