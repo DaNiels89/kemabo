@@ -25,11 +25,47 @@ get_header();
     </div>
 </div>
 
-<div class="container-fluid bgc-light-gray">
-    <div class="row">
-        <div class="col">
+<div class="container-fluid bgc-light-gray cf-no-padding">
+    <div class="row row-go-half-up first-slider"> 
+        <div class="col-md-4">
             <div class="red-bgc-div">
                 <h4 class="light-color">Waterbeheersing</h4>
+                <ul class="red-bgc-ul">
+                    <li class="red-bgc-ul-li">Lorem ipsum dolor sit amet</li>
+                    <li class="red-bgc-ul-li">Consectetur adipiscing elit</li>
+                    <li class="red-bgc-ul-li">In vel ante elementum</li>
+                    <li class="red-bgc-ul-li">Auctor nibh vitae</li>
+                </ul>
+                <a href="#" class="dark-bgc-light-arrow">
+                    <svg class="dark-rect-svg" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+                        <rect id="Rectangle_93" data-name="Rectangle 93" width="50" height="50" />
+                        <path id="chevron-right-solid" d="M36.47,45.844l-6.761,6.761a.835.835,0,0,1-1.181,0l-.789-.789a.835.835,0,0,1,0-1.179L33.1,45.254,27.738,39.87a.835.835,0,0,1,0-1.179l.789-.789a.835.835,0,0,1,1.181,0l6.761,6.761A.835.835,0,0,1,36.47,45.844Z" transform="translate(-7.495 -20.657)"/>
+                    </svg>
+                </a>
+            </div>  
+        </div>
+
+        <div class="col-md-4">
+            <div class="red-bgc-div">
+                <h4 class="light-color">Aandrijf en besturingstechniek</h4>
+                <ul class="red-bgc-ul">
+                    <li class="red-bgc-ul-li">Lorem ipsum dolor sit amet</li>
+                    <li class="red-bgc-ul-li">Consectetur adipiscing elit</li>
+                    <li class="red-bgc-ul-li">In vel ante elementum</li>
+                    <li class="red-bgc-ul-li">Auctor nibh vitae</li>
+                </ul>
+                <a href="#" class="dark-bgc-light-arrow">
+                    <svg class="dark-rect-svg" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+                        <rect id="Rectangle_93" data-name="Rectangle 93" width="50" height="50" />
+                        <path id="chevron-right-solid" d="M36.47,45.844l-6.761,6.761a.835.835,0,0,1-1.181,0l-.789-.789a.835.835,0,0,1,0-1.179L33.1,45.254,27.738,39.87a.835.835,0,0,1,0-1.179l.789-.789a.835.835,0,0,1,1.181,0l6.761,6.761A.835.835,0,0,1,36.47,45.844Z" transform="translate(-7.495 -20.657)"/>
+                    </svg>
+                </a>
+            </div>  
+        </div>
+
+        <div class="col-md-4">
+            <div class="red-bgc-div">
+                <h4 class="light-color">Draai en freeswerk</h4>
                 <ul class="red-bgc-ul">
                     <li class="red-bgc-ul-li">Lorem ipsum dolor sit amet</li>
                     <li class="red-bgc-ul-li">Consectetur adipiscing elit</li>
