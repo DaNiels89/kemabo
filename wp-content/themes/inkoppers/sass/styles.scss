@@ -774,6 +774,18 @@ p {
 	.hero-bgi {
 		height: 890px;
 	}
+
+	.who-are-we-text-div {
+		margin-right: -400px;
+		p {
+			font-size: 14px;
+			padding-bottom: 1em;
+		}
+		& .who-are-we-a {
+			margin-top: 1em;
+			left: 20px;
+		}
+	}
 }
 
 @media (min-width: 1200px) {
@@ -782,12 +794,9 @@ p {
 		padding-right: 140px;
 	}
 
-	.neg-margin-col {
-		margin-right: -125px;
-	}
-
 	.who-are-we-text-div {
 		padding: 60px;
+		margin-right: -125px;
 		& .red-rect-svg {
 			margin-left: 60px;
 		}

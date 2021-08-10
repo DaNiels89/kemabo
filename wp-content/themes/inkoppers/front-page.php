@@ -8,8 +8,8 @@ get_header();
 <div class="hero-bgi">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-8 offset-md-2 text-center">
-                <span class="hero-subtitle">kemabo bv</span>
+            <div class="col-lg-8 offset-lg-2 text-center">
+                <span class="hero-subtitle">Kemabo BV</span>
                 <p class="hero-paragraph">
                     De professional op het gebied van Water-beheersing, aandrijf en besturingstechniek en draai en freeswerk
                 </p>
@@ -85,20 +85,20 @@ get_header();
 
 <div class="padding-div-95"></div>
 
-<div class="container-fluid bgc-light-gray pb-5 pr-md-0">
+<div class="container-fluid bgc-light-gray pb-5 pr-lg-0">
     <div class="row">
         <div class="col">
             <img src="/kemabo/wp-content/uploads/2021/08/projecten_afbeelding_groot.png" alt="" class="img-fluid">
         </div>
-        <div class="col-xl-4 order-xl-first d-flex align-items-center neg-margin-col">
+        <div class="col-lg-4 order-lg-first d-flex align-items-center">
             <div class="who-are-we-text-div">
                 <h4 class="red-subtitle">
                     Wie zijn wij?
                 </h4>
-                <h3 class="h3-title mb-xl-4">
+                <h3 class="h3-title mb-lg-4">
                     Kemabo BV
                 </h3>
-                <p class="ml-2 mb-5 ml-xl-0 mb-xl-3">
+                <p class="ml-2 mb-5 ml-lg-0 mb-lg-3">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a lectus a purus convallis eleifend. Donec a pulvinar nunc. Ut eget rhoncus ipsum, a dictum orci. Donec sollicitudin mi eu blandit facilisis. Maecenas non egestas est. Nullam fringilla lacus lacinia efficitur egestas. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a lectus a purus convallis eleifend. Donec a pulvinar nunc. Ut eget rhoncus ipsum, a dictum orci.
                 </p>
                 <a href="#" class="who-are-we-a">
@@ -321,18 +321,18 @@ get_header();
 
 <div class="container-fluid pb-5 pl-md-0">
     <div class="row">
-        <div class="col">
+        <div class="col-lg-8">
             <img src="/kemabo/wp-content/uploads/2021/08/waterval-groot.png" alt="" class="img-fluid">
         </div>
-        <div class="col-xl-4 d-flex align-items-center neg-margin-col">
+        <div class="col-lg-4 d-flex align-items-center">
             <div class="who-are-we-text-div">
                 <h4 class="red-subtitle">
-                    Wie zijn wij?
+                    Meer informatie
                 </h4>
-                <h3 class="h3-title mb-xl-4">
-                    Kemabo BV
+                <h3 class="h3-title mb-lg-4">
+                    Lorem ipsum dolor sit amet adipiscing
                 </h3>
-                <p class="ml-2 mb-5 ml-xl-0 mb-xl-3">
+                <p class="ml-2 mb-5 ml-lg-0 mb-lg-3">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a lectus a purus convallis eleifend. Donec a pulvinar nunc.
                 </p>
                 <a href="#" class="who-are-we-a">
