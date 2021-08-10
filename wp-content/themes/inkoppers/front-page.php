@@ -153,47 +153,50 @@ get_header();
 </div>
 
 <div class="container-fluid">
-    <div class="row">   
-        <div class="col-md-5 offset-md-1">
-            <div class="recent-projects-div-for-image">
-                <img src="/kemabo/wp-content/uploads/2021/08/mobile-home-2.png" alt="" class="recent-projects-image">
-                <div class="recent-projects-image-overlay"></div>
-                <span class="recent-projects-image-top-text">Waterbeheersing</span>
-                <span class="recent-projects-image-bottom-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
-                <a href="#" class="recent-projects-image-bottom-a">
-                    <svg class="red-rect-svg-smaller" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
-                        <rect id="Rectangle_93" data-name="Rectangle 93" width="30" height="30" fill="#e50c00"/>
-                        <path id="chevron-right-solid" d="M32.88,42.569l-4.057,4.057a.5.5,0,0,1-.709,0l-.473-.473a.5.5,0,0,1,0-.708l3.215-3.23-3.215-3.23a.5.5,0,0,1,0-.708l.473-.473a.5.5,0,0,1,.709,0l4.057,4.057A.5.5,0,0,1,32.88,42.569Z" transform="translate(-15.495 -27.457)" fill="#fff"/>
-                    </svg>
-                </a>
-            </div>
-        </div>
-        <div class="col">
-            <div class="recent-projects-div-for-image">
-                <img src="/kemabo/wp-content/uploads/2021/08/mobile-home-3.png" alt="" class="recent-projects-image">
-                <div class="recent-projects-image-overlay"></div>
-                <span class="recent-projects-image-top-text">Aandrijf en besturingstechniek</span>
-                <span class="recent-projects-image-bottom-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
-                <a href="#" class="recent-projects-image-bottom-a">
-                    <svg class="red-rect-svg-smaller" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
-                        <rect id="Rectangle_93" data-name="Rectangle 93" width="30" height="30" fill="#e50c00"/>
-                        <path id="chevron-right-solid" d="M32.88,42.569l-4.057,4.057a.5.5,0,0,1-.709,0l-.473-.473a.5.5,0,0,1,0-.708l3.215-3.23-3.215-3.23a.5.5,0,0,1,0-.708l.473-.473a.5.5,0,0,1,.709,0l4.057,4.057A.5.5,0,0,1,32.88,42.569Z" transform="translate(-15.495 -27.457)" fill="#fff"/>
-                    </svg>
-                </a>
-            </div>
-        </div>
-        <div class="col">
-            <div class="recent-projects-div-for-image">
-                <img src="/kemabo/wp-content/uploads/2021/08/mobile-home-2.png" alt="" class="recent-projects-image">
-                <div class="recent-projects-image-overlay"></div>
-                <span class="recent-projects-image-top-text">draai en freeswerk</span>
-                <span class="recent-projects-image-bottom-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
-                <a href="#" class="recent-projects-image-bottom-a">
-                    <svg class="red-rect-svg-smaller" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
-                        <rect id="Rectangle_93" data-name="Rectangle 93" width="30" height="30" fill="#e50c00"/>
-                        <path id="chevron-right-solid" d="M32.88,42.569l-4.057,4.057a.5.5,0,0,1-.709,0l-.473-.473a.5.5,0,0,1,0-.708l3.215-3.23-3.215-3.23a.5.5,0,0,1,0-.708l.473-.473a.5.5,0,0,1,.709,0l4.057,4.057A.5.5,0,0,1,32.88,42.569Z" transform="translate(-15.495 -27.457)" fill="#fff"/>
-                    </svg>
-                </a>
+    <div class="row">
+        <div class="col-md-10 offset-md-1">
+            <div class="row">
+                <div class="col">
+                    <div class="recent-projects-div-for-image">g
+                        <img src="/kemabo/wp-content/uploads/2021/08/mobile-home-2.png" alt="" class="recent-projects-image">
+                        <div class="recent-projects-image-overlay"></div>
+                        <span class="recent-projects-image-top-text">Waterbeheersing</span>
+                        <span class="recent-projects-image-bottom-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+                        <a href="#" class="recent-projects-image-bottom-a">
+                            <svg class="red-rect-svg-smaller" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                                <rect id="Rectangle_93" data-name="Rectangle 93" width="30" height="30" fill="#e50c00"/>
+                                <path id="chevron-right-solid" d="M32.88,42.569l-4.057,4.057a.5.5,0,0,1-.709,0l-.473-.473a.5.5,0,0,1,0-.708l3.215-3.23-3.215-3.23a.5.5,0,0,1,0-.708l.473-.473a.5.5,0,0,1,.709,0l4.057,4.057A.5.5,0,0,1,32.88,42.569Z" transform="translate(-15.495 -27.457)" fill="#fff"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>    
+                <div class="col">
+                    <div class="recent-projects-div-for-image">
+                        <img src="/kemabo/wp-content/uploads/2021/08/mobile-home-2.png" alt="" class="recent-projects-image">
+                        <div class="recent-projects-image-overlay"></div>
+                        <span class="recent-projects-image-top-text">Waterbeheersing</span>
+                        <span class="recent-projects-image-bottom-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+                        <a href="#" class="recent-projects-image-bottom-a">
+                            <svg class="red-rect-svg-smaller" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                                <rect id="Rectangle_93" data-name="Rectangle 93" width="30" height="30" fill="#e50c00"/>
+                                <path id="chevron-right-solid" d="M32.88,42.569l-4.057,4.057a.5.5,0,0,1-.709,0l-.473-.473a.5.5,0,0,1,0-.708l3.215-3.23-3.215-3.23a.5.5,0,0,1,0-.708l.473-.473a.5.5,0,0,1,.709,0l4.057,4.057A.5.5,0,0,1,32.88,42.569Z" transform="translate(-15.495 -27.457)" fill="#fff"/>
+                            </svg>
+                        </a>
+                    </div>
+                    
+                    <div class="recent-projects-div-for-image">
+                        <img src="/kemabo/wp-content/uploads/2021/08/mobile-home-3.png" alt="" class="recent-projects-image">
+                        <div class="recent-projects-image-overlay"></div>
+                        <span class="recent-projects-image-top-text">Aandrijf en besturingstechniek</span>
+                        <span class="recent-projects-image-bottom-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+                        <a href="#" class="recent-projects-image-bottom-a">
+                            <svg class="red-rect-svg-smaller" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                                <rect id="Rectangle_93" data-name="Rectangle 93" width="30" height="30" fill="#e50c00"/>
+                                <path id="chevron-right-solid" d="M32.88,42.569l-4.057,4.057a.5.5,0,0,1-.709,0l-.473-.473a.5.5,0,0,1,0-.708l3.215-3.23-3.215-3.23a.5.5,0,0,1,0-.708l.473-.473a.5.5,0,0,1,.709,0l4.057,4.057A.5.5,0,0,1,32.88,42.569Z" transform="translate(-15.495 -27.457)" fill="#fff"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
