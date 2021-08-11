@@ -157,7 +157,7 @@ get_header();
         <div class="col-md-10 offset-md-1">
             <div class="row">
                 <div class="col">
-                    <div class="recent-projects-div-for-image">g
+                    <div class="recent-projects-div-for-image">
                         <img src="/kemabo/wp-content/uploads/2021/08/mobile-home-2.png" alt="" class="recent-projects-image">
                         <div class="recent-projects-image-overlay"></div>
                         <span class="recent-projects-image-top-text">Waterbeheersing</span>

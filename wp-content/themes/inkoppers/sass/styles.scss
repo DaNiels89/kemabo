@@ -131,7 +131,6 @@ p {
 }
 
 .navbar-collapse {
-	padding-bottom: 90px;
 	ul {
 		li {
 			&.menu-item {
@@ -139,6 +138,7 @@ p {
 				list-style-type: none;
 				text-transform: uppercase;
 				margin-block: 1em;
+
 				a {
 					color: $clr-dark;
 					font-weight: $fw-bold;
@@ -151,18 +151,29 @@ p {
 					}
 				}
 			}
+			&.current-menu-item {
+				a {
+					color: $clr-red;
+				}
+			}
 		}
 	}
 	&.collapse {
 		&.show {
 			height: 100vh;
-			background: $clr-light;
+			background: $clr-red;
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			text-align: center;
+			ul {
+				margin-bottom: 6em;
+			}
 		}
 	}
+}
+
+.collapsing {
+	transition-duration: 0s;
 }
 // End header
 
@@ -890,7 +901,7 @@ p {
 						&.menu-item {
 							a {
 								color: $clr-dark;
-								font-size: 11px;
+								font-size: 9px;
 								font-weight: bold;
 								text-transform: uppercase;
 								margin-right: 10px;
@@ -904,6 +915,11 @@ p {
 								}
 							}
 						}
+						&.current-menu-item {
+							a {
+								color: $clr-red;
+							}
+						}
 					}
 				}
 			}
@@ -911,7 +927,7 @@ p {
 			& .desktop-menu-contact-link-div {
 				transform: translateY(3px);
 				& .desktop-menu-a {
-					font-size: 11px;
+					font-size: 9px;
 					color: $clr-dark;
 					text-transform: uppercase;
 					font-weight: $fw-bold;
@@ -983,6 +999,12 @@ p {
 		}
 	}
 	// End footer
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+	.desktop-menu-logo-div {
+		width: 20%;
+	}
 }
 
 @media (min-width: 1200px) {
