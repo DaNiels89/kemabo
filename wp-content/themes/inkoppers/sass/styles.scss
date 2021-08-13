@@ -560,6 +560,7 @@ a {
 }
 
 .our-team {
+	margin-top: -157px;
 	& .column {
 		margin-bottom: 10px;
 	}
@@ -684,6 +685,10 @@ a {
 
 .footer-upper-row {
 	margin-top: -6em;
+	transition: transform 0.5s linear;
+	&.animation-hide {
+		transform: translateY(-10vh);
+	}
 }
 
 .footer-middle-row {
@@ -934,6 +939,19 @@ a {
 	.recent-projects-image-bottom-a {
 		right: 25px;
 		bottom: -10px;
+	}
+
+	.recent-projects-image-top-text {
+		font-size: 15px;
+		left: 51px;
+		&.latest-news {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+	}
+
+	.recent-projects-image-bottom-text {
+		left: 51px;
 	}
 
 	// Footer

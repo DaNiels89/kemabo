@@ -2,76 +2,104 @@
 // Exit if accessed directly.
 defined("ABSPATH") || exit;
 
+$heroImage = get_field("hero_background_image");
+$heroSubtitle = get_field("hero_subtitle");
+$heroText = get_field("hero_text");
+$heroLink = get_field("hero_link");
+
+$textLeftSubtitle = get_field("text_left_subtitle");
+$textLeftTitle = get_field("text_left_title");
+$textLeftText = get_field("text_left_text");
+$textLeftLink = get_field("text_left_link");
+$imageRight = get_field("image_right");
+
+$titlesSubtitle = get_field('titles_block_subtitle');
+$titlesTitle = get_field('titles_block_title');
+
+$bgiImage = get_field("bgi_image");
+$bgiSubtitle = get_field("bgi_subtitle");
+$bgiText = get_field("bgi_text");
+$bgiLink = get_field("bgi_link");
+
+$ourTeamTitle = get_field("team_members_title_red_block");
+
+$imageLeft = get_field("image_left");
+$textRightSubtitle = get_field("text_right_subtitle");
+$textRightTitle = get_field("text_right_title");
+$textRightText = get_field("text_right_text");
+$textRightLink = get_field("text_right_link");
+
+$partnersTitle = get_field("partners_title");
+
+$latestNewsTitle = get_field("latest_news_title");
+
 get_header();
 ?>
 
-<div class="hero-bgi position-relative">
+<div class="hero-bgi" style="background-image: url('<?php echo $heroImage["sizes"]["large"] ?>') ">
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-8 offset-lg-2 text-center">
-                <span class="hero-subtitle">Kemabo BV</span>
-                <p class="hero-paragraph">
-                    De professional op het gebied van Water-beheersing, aandrijf en besturingstechniek en draai en freeswerk
-                </p>
-                <div class="">
-                    <button class="btn-with-a">
-                        Meer informatie opvragen
-                        <a href="<?php echo get_permalink(42); ?>" class="btn btn-primary btn-red-big stretched-link d-inline-flex align-items-center justify-content-center">
-                            <i class="fas fa-chevron-right"></i>
-                        </a>
-                    </button>
-                </div>
+                <?php if ($heroSubtitle): ?>
+                    <span class="hero-subtitle"><?php echo $heroSubtitle; ?></span>
+                <?php endif; ?>
+                <?php if ($heroText): ?>
+                    <p class="hero-paragraph">
+                        <?php echo $heroText; ?>
+                    </p>
+                <?php endif; ?>
+                <?php if ($heroLink): ?>
+                    <div class="">
+                        <button class="btn-with-a">
+                            <?php echo $heroLink["title"]; ?>
+                            <a href="<?php echo $heroLink["url"]; ?>" class="btn btn-primary btn-red-big stretched-link d-inline-flex align-items-center justify-content-center" alt="<?php echo $heroLink["title"]; ?>">
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </button>
+                    </div>
+                <?php endif; ?>
             </div>
         </div>
     </div>
 </div>
 
 <div class="container-fluid bgc-light-gray cf-no-padding">
-    <div class="row row-go-half-up first-slider"> 
-        <div class="col-md-4">
-            <div class="red-bgc-div">
-                <h4 class="light-color">Waterbeheersing</h4>
-                <ul class="red-bgc-ul">
-                    <li class="red-bgc-ul-li">Lorem ipsum dolor sit amet</li>
-                    <li class="red-bgc-ul-li">Consectetur adipiscing elit</li>
-                    <li class="red-bgc-ul-li">In vel ante elementum</li>
-                    <li class="red-bgc-ul-li">Auctor nibh vitae</li>
-                </ul>
-                <a href="<?php echo get_permalink(36); ?>" class="btn btn-secondary btn-dark-big align-right-bottom-main stretched-link d-flex align-items-center justify-content-center">
-                    <i class="fas fa-chevron-right"></i>
-                </a>
-            </div>  
-        </div>
+    <div class="row row-go-half-up first-slider;">
 
-        <div class="col-md-4">
-            <div class="red-bgc-div">
-                <h4 class="light-color">Aandrijf en besturingstechniek</h4>
-                <ul class="red-bgc-ul">
-                    <li class="red-bgc-ul-li">Lorem ipsum dolor sit amet</li>
-                    <li class="red-bgc-ul-li">Consectetur adipiscing elit</li>
-                    <li class="red-bgc-ul-li">In vel ante elementum</li>
-                    <li class="red-bgc-ul-li">Auctor nibh vitae</li>
-                </ul>
-                <a href="<?php echo get_permalink(38); ?>" class="btn btn-secondary btn-dark-big align-right-bottom-main stretched-link d-flex align-items-center justify-content-center">
-                    <i class="fas fa-chevron-right"></i>
-                </a>
-            </div>  
-        </div>
+        <?php if( have_rows('red_services_block_repeater') ): ?>
+            <?php while( have_rows('red_services_block_repeater') ) : the_row();
+                $rsb_link = get_sub_field('red_services_block_link');
+            ?>
 
-        <div class="col-md-4">
-            <div class="red-bgc-div">
-                <h4 class="light-color">Draai en freeswerk</h4>
-                <ul class="red-bgc-ul">
-                    <li class="red-bgc-ul-li">Lorem ipsum dolor sit amet</li>
-                    <li class="red-bgc-ul-li">Consectetur adipiscing elit</li>
-                    <li class="red-bgc-ul-li">In vel ante elementum</li>
-                    <li class="red-bgc-ul-li">Auctor nibh vitae</li>
-                </ul>
-                <a href="<?php echo get_permalink(40); ?>" class="btn btn-secondary btn-dark-big align-right-bottom-main stretched-link d-flex align-items-center justify-content-center">
-                    <i class="fas fa-chevron-right"></i>
-                </a>
-            </div>  
-        </div>
+                <div class="col-md-4">
+                    <div class="red-bgc-div">
+                        <?php if ($rsb_link): ?>
+                            <h4 class="light-color"><?php echo $rsb_link["title"]; ?></h4>
+                        <?php endif; ?>
+
+                        <ul class="red-bgc-ul">
+
+                            <?php if( have_rows('service_item_repeater') ): ?>
+                                <?php while( have_rows('service_item_repeater') ) : the_row(); 
+                                    $serviceItem = get_sub_field("service_item");
+                                ?>
+
+                                    <li class="red-bgc-ul-li"><?php echo $serviceItem; ?></li>
+
+                                <?php endwhile; ?>
+                            <?php endif; ?>
+
+                        </ul>
+
+                        <a href="<?php echo $rsb_link["url"] ?>" class="stretched-link btn btn-secondary btn-dark-big align-right-bottom-main d-flex align-items-center justify-content-center" title="<?php echo $rsb_link["title"] ?>" target="<?php echo $rsb_link["target"] ?>">
+                            <i class="fas fa-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+            <?php endwhile; ?>
+        <?php endif; ?>
+
     </div>
 </div>
 
@@ -80,22 +108,30 @@ get_header();
 <div class="container-fluid bgc-light-gray pb-5 pr-lg-0">
     <div class="row">
         <div class="col">
-            <img src="/kemabo/wp-content/uploads/2021/08/projecten_afbeelding_groot.png" alt="" class="img-fluid">
+            <img src="<?php echo $imageRight["sizes"]["big-laying-image"]; ?>" alt="<?php echo $imageLeft["title"]; ?>" class="img-fluid">
         </div>
         <div class="col-lg-4 order-lg-first d-flex align-items-center">
             <div class="who-are-we-text-div">
-                <h4 class="red-subtitle">
-                    Wie zijn wij?
-                </h4>
-                <h3 class="h3-title mb-lg-4">
-                    Kemabo BV
-                </h3>
-                <p class="ml-2 mb-5 ml-lg-0 mb-lg-3">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a lectus a purus convallis eleifend. Donec a pulvinar nunc. Ut eget rhoncus ipsum, a dictum orci. Donec sollicitudin mi eu blandit facilisis. Maecenas non egestas est. Nullam fringilla lacus lacinia efficitur egestas. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a lectus a purus convallis eleifend. Donec a pulvinar nunc. Ut eget rhoncus ipsum, a dictum orci.
-                </p>
-                <a href="<?php echo get_permalink(42); ?>" class="btn btn-primary btn-red-big bottom-10 stretched-link d-inline-flex align-items-center justify-content-center">
-                    <i class="fas fa-chevron-right"></i>
-                </a>
+                <?php if ($textLeftSubtitle): ?>
+                    <h4 class="red-subtitle">
+                        <?php echo $textLeftSubtitle; ?>
+                    </h4>
+                <?php endif; ?>
+                <?php if ($textLeftSubtitle): ?>
+                    <h3 class="h3-title mb-lg-4">
+                        <?php echo $textLeftTitle; ?>
+                    </h3>
+                <?php endif; ?>
+                <?php if ($textLeftSubtitle): ?>
+                    <p class="ml-2 mb-5 ml-lg-0 mb-lg-3">
+                        <?php echo $textLeftText; ?>
+                    </p>
+                <?php endif; ?>
+                <?php if ($textLeftLink): ?>
+                    <a href="<?php echo $textLeftLink["url"]; ?>" class="btn btn-primary btn-red-big bottom-10 stretched-link d-inline-flex align-items-center justify-content-center" title="<?php echo $textLeftLink["title"]; ?>" target="<?php echo $textLeftLink["target"]; ?>">
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                <?php endif; ?>
             </div>
         </div>
     </div>
@@ -105,8 +141,12 @@ get_header();
     <div class="row">
         <div class="col">
             <div class="recent-projects-text-div text-center">
-                <h4 class="red-subtitle ">Lorum ipsum dolor</h4>
-                <h3 class="h3-padding">Recente projecten</h3>
+                <?php if ($titlesSubtitle): ?>
+                    <h4 class="red-subtitle "><?php echo $titlesSubtitle; ?></h4>
+                <?php endif; ?>
+                <?php if ($titlesTitle): ?>
+                    <h3 class="h3-padding"><?php echo $titlesTitle; ?></h3>
+                <?php endif; ?>
             </div>
         </div>
     </div>
@@ -166,20 +206,28 @@ get_header();
     </div>
 </div>
 
-<div class="see-all-projects-div">
+<div class="see-all-projects-div" style="background-image: url('<?php echo $bgiImage["sizes"]["large"]; ?>'); background-color: linear-gradient(0,0,0,0.5); background-size: cover; background-repeat: no-repeat;">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-4 offset-md-4 text-center">
-                <span class="see-all-projects-subtitle">Lorem ipsum dolor sit amet</span>
-                <p class="hero-paragraph hero-paragraph-smaller">
-                Benieuwd naar wat we nog meer gerealiseerd hebben?
-                </p>
-                <button class="btn-with-a">
-                    Bekijk alle projecten
-                    <a href="<?php echo get_permalink(44); ?>" class="btn btn-primary btn-red-big stretched-link d-inline-flex align-items-center justify-content-center">
-                        <i class="fas fa-chevron-right"></i>
-                    </a>
-                </button>
+                <?php if ($bgiSubtitle): ?>
+                    <span class="see-all-projects-subtitle">
+                        <?php echo $bgiSubtitle; ?>
+                    </span>
+                <?php endif; ?>
+                <?php if ($bgiText): ?>
+                    <p class="hero-paragraph hero-paragraph-smaller">
+                        <?php echo $bgiText; ?>
+                    </p>
+                <?php endif; ?>
+                <?php if ($bgiLink): ?>
+                    <button class="btn-with-a">
+                        <?php echo $bgiLink["title"]; ?>
+                        <a href="<?php echo $bgiLink["url"]; ?>" class="btn btn-primary btn-red-big stretched-link d-inline-flex align-items-center justify-content-center">
+                            <i class="fas fa-chevron-right"></i>
+                        </a>
+                    </button>
+                <?php endif; ?>
             </div>
         </div>
     </div>
@@ -190,11 +238,12 @@ get_header();
         <div class="column col-md-12">
             <div class="row">
                 <div class="column col-md-3 d-flex align-items-center title-div">
-                    <h2 class="">Ons<br />team</h2>
+                    <?php if ($ourTeamTitle): ?>
+                        <h2 class=""><?php echo $ourTeamTitle; ?></h2>
+                    <?php endif; ?>
                 </div>
                 <div class="column col-md-9">
                     <div class="row">
-
                     
                         <?php if( have_rows('team_members_repeater') ): ?>
                             <?php while( have_rows('team_members_repeater') ) : the_row();
@@ -220,10 +269,8 @@ get_header();
                                     </div>
                                 </div>
 
-
                             <?php endwhile; ?>
                         <?php endif; ?>
-
 
                     </div>
                 </div>
@@ -237,22 +284,30 @@ get_header();
 <div class="container-fluid pb-5 pl-md-0">
     <div class="row">
         <div class="col-lg-8">
-            <img src="/kemabo/wp-content/uploads/2021/08/waterval-groot.png" alt="" class="img-fluid">
+            <img src="<?php echo $imageLeft["sizes"]["big-laying-image"]; ?>" alt="<?php echo $imageLeft["title"]; ?>" class="img-fluid">
         </div>
         <div class="col-lg-4 d-flex align-items-center to-the-left">
             <div class="who-are-we-text-div">
-                <h4 class="red-subtitle">
-                    Meer informatie
-                </h4>
-                <h3 class="h3-title mb-lg-4">
-                    Lorem ipsum dolor sit amet adipiscing
-                </h3>
-                <p class="ml-2 mb-5 ml-lg-0 mb-lg-3">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a lectus a purus convallis eleifend. Donec a pulvinar nunc.
-                </p>
-                <a href="<?php echo get_permalink(42); ?>" class="btn btn-primary btn-red-big bottom-10 stretched-link d-inline-flex align-items-center justify-content-center">
-                    <i class="fas fa-chevron-right"></i>
-                </a>
+                <?php if ($textRightSubtitle): ?>
+                    <h4 class="red-subtitle">
+                        <?php echo $textRightSubtitle; ?>
+                    </h4>
+                <?php endif; ?>
+                <?php if ($textRightTitle): ?>
+                    <h3 class="h3-title mb-lg-4">
+                        <?php echo $textRightTitle; ?>
+                    </h3>
+                <?php endif; ?>
+                <?php if ($textRightText): ?>
+                    <p class="ml-2 mb-5 ml-lg-0 mb-lg-3">
+                        <?php echo $textRightText; ?>
+                    </p>
+                <?php endif; ?>
+                <?php if ($textRightLink): ?>
+                    <a href="<?php echo $textRightLink["url"]; ?>" class="btn btn-primary btn-red-big bottom-10 stretched-link d-inline-flex align-items-center justify-content-center" title="<?php echo $$textRightLink["title"]; ?>">
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                <?php endif; ?>
             </div>
         </div>
     </div>
@@ -262,7 +317,11 @@ get_header();
     <div class="row">
         <div class="col">
             <div class="cooperating-div">
-                <h4 class="cooperating-title">Wij werken samen met</h4>
+                <?php if ($partnersTitle): ?>
+                    <h4 class="cooperating-title">
+                        <?php echo $partnersTitle; ?>
+                    </h4>
+                <?php endif; ?>
             </div>
         </div>
     </div>
@@ -272,27 +331,24 @@ get_header();
     <div class="row">
         <div class="col-md-10 offset-md-1">
             <div class="row">
-                <div class="col-md-4">
-                    <a href="https://www.mbi.nl/" class="" target="_blank">
-                        <div class="logo-partner-div">
-                            <img src="/kemabo/wp-content/uploads/2021/08/Logo-MBI-De-Steenmeesters.svg" alt="" class="logo-partner-img">
+
+                <?php if( have_rows('partners_logo_div_repeater') ): ?>
+                    <?php while( have_rows('partners_logo_div_repeater') ) : the_row();
+                        $partnerLogo = get_sub_field('partner_logo');
+                        $partnerLink = get_sub_field('partner_link');
+                    ?>
+
+                        <div class="col-md-4">
+                            <a href="<?php echo $partnerLink["url"]; ?>" class="" title="<?php echo $partnerLink["title"]; ?>" target="<?php echo $partnerLink["targer"]; ?>">
+                                <div class="logo-partner-div">
+                                    <img src="<?php echo $partnerLogo["sizes"]["large"]; ?>" class="logo-partner-img" alt="<?php echo $partnerLogo["title"]; ?>">
+                                </div>
+                            </a>
                         </div>
-                    </a>
-                </div>
-                <div class="col-md-4">
-                    <a href="https://nl.hansa-flex.com/index.html" class="" target="_blank">
-                        <div class="logo-partner-div">
-                            <img src="/kemabo/wp-content/uploads/2021/08/Logo-Hansaflex.svg" alt="" class="logo-partner-img">
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-4">
-                    <a href="https://www.mbi.nl/" class="" target="_blank">
-                        <div class="logo-partner-div">
-                            <img src="/kemabo/wp-content/uploads/2021/08/Logo-MBI-De-Steenmeesters.svg" alt="" class="logo-partner-img">
-                        </div>
-                    </a>
-                </div>
+
+                    <?php endwhile; ?>
+                <?php endif; ?>
+
             </div>
         </div>
     </div>
@@ -303,7 +359,9 @@ get_header();
 <div class="container-fluid">
     <div class="row">
         <div class="col text-center">
-            <h2 class="mb-5">Laatste nieuws</h2>
+            <?php if ($latestNewsTitle): ?>
+                <h2 class="mb-5"><?php echo $latestNewsTitle; ?></h2>
+            <?php endif; ?>
         </div>
     </div>
 </div>

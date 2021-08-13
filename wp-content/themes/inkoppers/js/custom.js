@@ -61,4 +61,15 @@ jQuery(document).ready(function ($) {
 			},
 		],
 	});
+
+	$(window).scroll(function () {
+		if (
+			$(window).scrollTop() + $(window).height() >
+			$(document).height() - 100
+		) {
+			$(".footer-upper-row").addClass("animation-hide");
+		} else {
+			$(".footer-upper-row").removeClass("animation-hide");
+		}
+	});
 });
