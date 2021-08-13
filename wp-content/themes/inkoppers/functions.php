@@ -47,3 +47,11 @@ function wpharvest_yoasttobottom()
 }
 
 add_filter("wpseo_metabox_prio", "wpharvest_yoasttobottom");
+
+add_image_size("mobile-laying-image", 314, 188, ["center", "center"]);
+add_image_size("mobile-laying-image-taller", 314, 210, ["center", "center"]);
+add_image_size("mobile-team-image", 314, 314, ["center", "center"]);
+add_image_size("team-image", 398, 398, ["center", "center"]);
+add_image_size("big-laying-image", 1228, 734, ["center", "center"]);
+add_image_size("tall-standing-image", 674, 916, ["center", "center"]);
+add_image_size("small-laying-image", 674, 450, ["center", "center"]);
