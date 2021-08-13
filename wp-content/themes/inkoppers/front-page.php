@@ -239,7 +239,7 @@ get_header();
         <div class="col-lg-8">
             <img src="/kemabo/wp-content/uploads/2021/08/waterval-groot.png" alt="" class="img-fluid">
         </div>
-        <div class="col-lg-4 d-flex align-items-center">
+        <div class="col-lg-4 d-flex align-items-center to-the-left">
             <div class="who-are-we-text-div">
                 <h4 class="red-subtitle">
                     Meer informatie

@@ -1,6 +1,10 @@
 <?php
 // Exit if accessed directly.
 defined( "ABSPATH" ) || exit;
+
+$headerLogo = get_field("header_logo", "option");
+$headerLink = get_field("header_link_right", "option");
+
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -17,7 +21,7 @@ defined( "ABSPATH" ) || exit;
 <!-- Mobile menu -->
 <nav id="mobile-menu" class="navbar navbar-expand-lg navbar-light bg-white d-lg-none">
   <a class="navbar-brand" href="<?php echo home_url(); ?>">
-    <img src="/kemabo/wp-content/uploads/2021/08/logo.svg" width="152,37" height="30,5" class="img-fluid" alt="">
+    <img src="<?php echo $headerLogo["sizes"]["large"]; ?>" width="152,37" height="30,5" class="img-fluid" alt="<?php echo $headerLogo["title"]; ?>">
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="custom-toggler navbar-toggler-icon"></span>
@@ -33,20 +37,21 @@ defined( "ABSPATH" ) || exit;
   <div class="desktop-menu-wrapper">
     <div class="desktop-menu-logo-div">
       <a class="navbar-brand" href="<?php echo home_url(); ?>">
-        <img src="/kemabo/wp-content/uploads/2021/08/logo-desktop.svg" width="243,11" height="44,85" class="img-fluid" alt="">
+        <img src="<?php echo $headerLogo["sizes"]["large"]; ?>" width="243,11" height="44,85" class="img-fluid" alt="<?php echo $headerLogo["title"]; ?>">
       </a>
     </div>
     <div class="desktop-menu-pages-links-div">
       <?php wp_nav_menu(['menu' => 'Hoofdmenu', 'container' => false, 'menu_class' => false]); ?>
     </div>
     <div class="desktop-menu-contact-link-div">
-      <a href="<?php echo home_url("over-ons"); ?>" class="desktop-menu-a">
-        Contact opnemen
-        <svg class="desktop-menu-svg" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
-          <rect id="Rectangle_93" data-name="Rectangle 93" width="50" height="50" />
-          <path id="chevron-right-solid" d="M36.47,45.844l-6.761,6.761a.835.835,0,0,1-1.181,0l-.789-.789a.835.835,0,0,1,0-1.179L33.1,45.254,27.738,39.87a.835.835,0,0,1,0-1.179l.789-.789a.835.835,0,0,1,1.181,0l6.761,6.761A.835.835,0,0,1,36.47,45.844Z" transform="translate(-7.495 -20.657)"/>
-        </svg>
-      </a>
+      <?php if($headerLink): ?>
+        <button class="btn-with-a clr-dark">
+          <?php echo $headerLink["title"]; ?>
+            <a href="<?php echo $headerLink["url"]; ?>" class="btn btn-primary btn-gray-big stretched-link d-inline-flex align-items-center justify-content-center" title="<?php echo $headerLink["title"]; ?>">
+                <i class="fas fa-chevron-right"></i>
+            </a>
+        </button>
+      <?php endif; ?>
     </div>
   </div>
 </nav>

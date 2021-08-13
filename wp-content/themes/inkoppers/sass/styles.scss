@@ -111,6 +111,16 @@ a {
 				transform: scale(1.33);
 			}
 		}
+		&.btn-gray-big {
+			background-color: $clr-dark-gray;
+			border-color: $clr-dark-gray;
+			height: 50px;
+			width: 50px;
+			&:hover {
+				background-color: $clr-red;
+				border-color: $clr-red;
+			}
+		}
 		&:hover {
 			background-color: $clr-dark;
 			border-color: $clr-dark;
@@ -786,6 +796,11 @@ a {
 	button {
 		&.btn-with-a {
 			font-size: 15px;
+			&.clr-dark {
+				color: $clr-dark;
+				font-size: 9px;
+				transform: translateY(3px);
+			}
 		}
 	}
 
@@ -987,6 +1002,10 @@ a {
 			height: 100%;
 			justify-content: space-between;
 
+			& .navbar-brand {
+				margin-right: 0;
+			}
+
 			& .desktop-menu-pages-links-div {
 				ul {
 					display: flex;
@@ -1018,38 +1037,21 @@ a {
 					}
 				}
 			}
-
-			& .desktop-menu-contact-link-div {
-				transform: translateY(3px);
-				& .desktop-menu-a {
+		}
+		button {
+			&.btn-with-a {
+				&.clr-dark {
 					font-size: 9px;
-					color: $clr-dark;
-					text-transform: uppercase;
-					font-weight: $fw-bold;
-
-					& .desktop-menu-svg {
-						margin-left: 20px;
-						transform: translateY(-3px);
-
-						& rect {
-							fill: $clr-dark-gray;
-							transition: fill 0.3s ease-in-out;
-						}
-
-						& path {
-							fill: $clr-light;
-						}
+					transform: translateY(2px);
+					a {
+						transform: translateY(-2px);
 					}
-
 					&:hover,
 					&:active,
 					&:focus {
-						text-decoration: none;
-
-						& .desktop-menu-svg {
-							& rect {
-								fill: $clr-red;
-							}
+						a {
+							background-color: $clr-red;
+							border-color: $clr-red;
 						}
 					}
 				}
@@ -1061,6 +1063,10 @@ a {
 	.hero-bgi {
 		height: 890px;
 		margin-top: 0;
+	}
+
+	.to-the-left {
+		margin-left: -25em;
 	}
 
 	.who-are-we-text-div {
@@ -1126,7 +1132,7 @@ a {
 
 @media (min-width: 992px) and (max-width: 1199px) {
 	.desktop-menu-logo-div {
-		width: 20%;
+		width: 15%;
 	}
 }
 
@@ -1150,11 +1156,6 @@ a {
 		}
 	}
 
-	.who-are-we-text-div {
-		padding: 60px;
-		margin-right: -125px;
-	}
-
 	// Header
 	#desktop-menu {
 		& .desktop-menu-wrapper {
@@ -1170,17 +1171,25 @@ a {
 					}
 				}
 			}
-			& .desktop-menu-contact-link-div {
-				& .desktop-menu-a {
-					font-size: 11px;
-					& .desktop-menu-svg {
-						margin-left: 10px;
+			button {
+				&.btn-with-a {
+					&.clr-dark {
+						font-size: 11px;
 					}
 				}
 			}
 		}
 	}
 	// End header
+
+	.to-the-left {
+		margin-left: -12em;
+	}
+
+	.who-are-we-text-div {
+		padding: 60px;
+		margin-right: -125px;
+	}
 
 	// Footer
 	.footer-upper-row {
@@ -1220,13 +1229,10 @@ a {
 					}
 				}
 			}
-			& .desktop-menu-contact-link-div {
-				transform: translateY(2px);
-				& .desktop-menu-a {
-					font-size: 13px;
-					& .desktop-menu-svg {
-						margin-left: 20px;
-						transform: translateY(-2px);
+			button {
+				&.btn-with-a {
+					&.clr-dark {
+						font-size: 13px;
 					}
 				}
 			}
@@ -1251,11 +1257,10 @@ a {
 					}
 				}
 			}
-			& .desktop-menu-contact-link-div {
-				& .desktop-menu-a {
-					font-size: 15px;
-					& .desktop-menu-svg {
-						margin-left: 20px;
+			button {
+				&.btn-with-a {
+					&.clr-dark {
+						font-size: 15px;
 					}
 				}
 			}
